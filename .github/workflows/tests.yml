@@ -26,8 +26,10 @@ jobs:
     - name: List directory contents
       run: |
         ls -R
+        echo "Listing contents of mnist_mlops directory:"
+        ls -R mnist_mlops/
     - name: Test with pytest
       run: |
         pip install pytest
-        pytest -v tests
+        pytest -v \mnist_mlops\tests
 
