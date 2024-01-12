@@ -26,4 +26,8 @@ jobs:
     - name: Test with pytest
       run: |
         pip install pytest
-        pytest -v mnist_mlops/tests
+        pytest -v tests
+    - name: List directory contents
+        run: |
+          ls -R
+
