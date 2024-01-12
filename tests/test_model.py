@@ -1,6 +1,9 @@
 import pytest
 import torch
-from mnist_mlops.models.model import myawesomemodel  # Adjust the import path as needed
+import os
+import sys
+ 
+from mnist_classifier.models.model import myawesomemodel  # Adjust the import path as needed
 
 def test_model_input_output_shape():
     """
