@@ -2,8 +2,9 @@ import pytest
 import torch
 import os
 import sys
- 
-from mnist_classifier.models.model import myawesomemodel  # Adjust the import path as needed
+
+from mnist_classifier.models.model import myawesomemodel
+
 
 def test_model_input_output_shape():
     """
