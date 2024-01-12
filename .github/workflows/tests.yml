@@ -28,6 +28,6 @@ jobs:
         pip install pytest
         pytest -v tests
     - name: List directory contents
-        run: |
-          ls -R
+      run: |
+        ls -R
 
