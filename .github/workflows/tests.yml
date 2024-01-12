@@ -28,6 +28,8 @@ jobs:
         ls -R
         echo "Listing contents of mnist_mlops directory:"
         ls -R mnist_mlops/
+    - name: Set PYTHONPATH
+      run: echo "PYTHONPATH=${{ github.workspace }}" >> $GITHUB_ENV
     - name: Test with pytest
       run: |
         pip install pytest
