@@ -1,10 +1,9 @@
 import pytest
-import pytest
 import torch
-from ..models.model import myawesomemodel  # Adjusted relative import
+import os
+import sys
 
-
-
+from mnist_classifier.models.model import myawesomemodel
 
 
 def test_model_input_output_shape():
