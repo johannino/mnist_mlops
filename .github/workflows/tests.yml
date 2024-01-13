@@ -25,13 +25,10 @@ jobs:
         pip install -r requirements.txt
         pip install -r requirements_tests.txt
 
-    - name: Get data
-      run: dvc pull
-      env:
-          GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_CREDENTIALS_DATA }}
+    - name: Set PYTHONPATH
+      run: echo "PYTHONPATH=$GITHUB_WORKSPACE" >> $GITHUB_ENV
 
     - name: Test with pytest
       run: |
         pip install pytest
-        export PYTHONPATH=$GITHUB_WORKSPACE
         pytest -v
